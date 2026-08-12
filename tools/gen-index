@@ -1,0 +1,6 @@
+#!/bin/sh
+# Regenerate index.json (validates first — an invalid registry is never indexed).
+set -e
+cd "$(dirname "$0")/.."
+if command -v rig >/dev/null 2>&1; then exec rig registry index .; fi
+exec python3 -m rig_cli registry index .

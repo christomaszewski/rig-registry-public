@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "profile manifest",
+  "type": "object",
+  "required": [
+    "kind",
+    "name",
+    "version",
+    "requires",
+    "config"
+  ],
+  "properties": {
+    "kind": {
+      "const": "profile"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "provides": {
+      "type": "object",
+      "properties": {
+        "sensor": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "match"
+            ],
+            "properties": {
+              "model": {
+                "type": "string"
+              },
+              "match": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "requires": {
+      "type": "object",
+      "required": [
+        "service"
+      ],
+      "properties": {
+        "service": {
+          "type": "string"
+        }
+      }
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "payload"
+      ],
+      "properties": {
+        "payload": {
+          "type": "string"
+        },
+        "overrides_schema": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "service manifest",
+  "type": "object",
+  "required": [
+    "kind",
+    "name",
+    "version"
+  ],
+  "properties": {
+    "kind": {
+      "const": "service"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ros_distro": {
+      "type": "string"
+    },
+    "instantiable": {
+      "type": "boolean"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "repo",
+        "rev"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string"
+        },
+        "rev": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$|^[0-9a-f]{64}$"
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "ref"
+      ],
+      "properties": {
+        "ref": {
+          "type": "string",
+          "pattern": "@sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

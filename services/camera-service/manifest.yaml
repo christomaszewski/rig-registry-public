@@ -1,0 +1,9 @@
+kind: service
+name: camera-service
+version: 1.0.0
+platforms: [linux/arm64]
+ros_distro: lyrical
+instantiable: true            # template service — a profile (or hand-authored config) instantiates it
+source:
+  repo: https://github.com/christomaszewski/camera-service.git
+  rev: be911d43cc43b95a611f6992bbe56c81820a9b44

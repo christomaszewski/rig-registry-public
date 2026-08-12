@@ -1,0 +1,15 @@
+# Thin wrapper — ALL validation logic lives in rig (tools/validate -> `rig registry validate`),
+# so this file stays tiny and can never drift from the client's rules.
+name: registry-ci
+on:
+  push: {branches: [main]}
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install git+https://github.com/christomaszewski/rig
+      - run: ./tools/validate

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "index.json (GENERATED)",
+  "type": "object",
+  "required": [
+    "schema",
+    "namespace",
+    "packages",
+    "sensors",
+    "projects"
+  ],
+  "properties": {
+    "schema": {
+      "type": "integer"
+    },
+    "namespace": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "packages": {
+      "type": "object"
+    },
+    "sensors": {
+      "type": "object"
+    },
+    "projects": {
+      "type": "object"
+    }
+  }
+}

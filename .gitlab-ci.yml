@@ -1,0 +1,6 @@
+# Thin wrapper — same neutral entrypoint as the GitHub workflow (tools/validate).
+validate:
+  image: python:3.12
+  script:
+    - pip install git+https://github.com/christomaszewski/rig
+    - ./tools/validate

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Neutral validation entrypoint — the CI wrappers, `rig pkg promote`, and humans all call THIS.
+# All rules live in rig itself (one source of truth); install it once:
+#   pipx install git+https://github.com/christomaszewski/rig
+set -e
+cd "$(dirname "$0")/.."
+if command -v rig >/dev/null 2>&1; then exec rig registry validate .; fi
+exec python3 -m rig_cli registry validate .

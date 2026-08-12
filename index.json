@@ -1,0 +1,69 @@
+{
+  "namespace": "public",
+  "packages": {
+    "camera-service": {
+      "kind": "service",
+      "path": "services/camera-service",
+      "version": "1.0.0"
+    },
+    "mapir-survey3w": {
+      "kind": "profile",
+      "path": "profiles/mapir-survey3w",
+      "version": "1.0.0"
+    },
+    "ros1-bag-logger": {
+      "kind": "service",
+      "path": "services/ros1-bag-logger",
+      "version": "1.0.0"
+    },
+    "ros2-bag-logger": {
+      "kind": "service",
+      "path": "services/ros2-bag-logger",
+      "version": "1.0.0"
+    },
+    "siyi-zr30": {
+      "kind": "profile",
+      "path": "profiles/siyi-zr30",
+      "version": "1.0.0"
+    },
+    "zenoh-router": {
+      "kind": "service",
+      "path": "services/zenoh-router",
+      "version": "1.0.0"
+    }
+  },
+  "projects": {},
+  "schema": 1,
+  "sensors": {
+    "mapir-survey3w": [
+      {
+        "profile": "mapir-survey3w",
+        "tier": "exact"
+      }
+    ],
+    "siyi-zr30": [
+      {
+        "profile": "siyi-zr30",
+        "tier": "exact"
+      }
+    ],
+    "survey3": [
+      {
+        "profile": "mapir-survey3w",
+        "tier": "exact"
+      }
+    ],
+    "survey3w": [
+      {
+        "profile": "mapir-survey3w",
+        "tier": "exact"
+      }
+    ],
+    "zr30": [
+      {
+        "profile": "siyi-zr30",
+        "tier": "exact"
+      }
+    ]
+  }
+}

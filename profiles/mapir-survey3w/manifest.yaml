@@ -1,0 +1,11 @@
+kind: profile
+name: mapir-survey3w
+version: 1.0.0
+provides:
+  sensor:
+    - model: "MAPIR Survey3W OCN"
+      match: ["mapir-survey3w", "survey3w", "survey3"]
+requires:
+  service: camera-service@^1.0
+config:
+  payload: config/survey3w.yaml

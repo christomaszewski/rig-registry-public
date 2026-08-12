@@ -1,0 +1,35 @@
+# SIYI ZR30 — 4K gimbal camera, consumed over RTSP. NAMELESS profile: the deployment's instance
+# row supplies `name`; vehicle/project specifics (the camera's IP, enabling webrtc) come via
+# overlays or rig-local overrides.
+service: camera-service
+
+camera:
+  type: rtsp
+  # frame_rate is auto-probed (informational); reconnect (on by default, 5s) recovers a stalled stream.
+
+rtsp:
+  url: rtsp://192.168.144.25:8554/main.264   # SIYI factory-default IP — override per vehicle
+  protocols: tcp           # RTP-over-TCP (robust through NAT/firewalls)
+  latency_ms: 200
+  # codec/width/height/frame_rate are auto-probed at open(); the ZR30 delivers H.265/H.264 up to 4K.
+
+# Gimbal control: the SIYI SDK listens on UDP :37260 at the same IP (driven by a separate stack;
+# recorded here as the device's known control endpoint).
+
+recording:
+  enabled: true
+  encoder: auto            # encoded source -> stream-copy the delivered bitstream (no re-encode)
+  output_dir: /data/recordings
+  segment_seconds: 60
+
+transport:
+  plugin_endpoint: { enabled: true, socket_path: /tmp/cam/frames }
+  raw_endpoint: { enabled: true, socket_path: /tmp/cam/raw }
+
+plugins:
+  - name: ros2-bridge
+    enabled: true
+    isolation: container
+    params: { topic: image_raw }
+  # webrtc-bridge is intentionally OFF in the registry default: it claims a host-unique signalling
+  # port. Enable it per deployment (overlay/override) with a per-instance port.

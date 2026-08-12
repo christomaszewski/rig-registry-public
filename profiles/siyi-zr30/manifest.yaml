@@ -1,0 +1,11 @@
+kind: profile
+name: siyi-zr30
+version: 1.0.0
+provides:
+  sensor:
+    - model: "SIYI ZR30"
+      match: ["siyi-zr30", "zr30"]
+requires:
+  service: camera-service@^1.0
+config:
+  payload: config/zr30.yaml

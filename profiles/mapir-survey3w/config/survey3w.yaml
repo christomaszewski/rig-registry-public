@@ -1,0 +1,32 @@
+# MAPIR Survey3W (OCN — Orange/Cyan/NIR survey camera) captured as a USB/v4l2 source.
+# NAMELESS profile: the deployment's instance row supplies `name`.
+service: camera-service
+
+camera:
+  type: usb
+  frame_rate: 30.0
+
+usb:
+  # Stable by-id path so a replug reconnects the SAME camera (a bare /dev/videoN renumbers);
+  # override per vehicle with the actual device serial.
+  device: /dev/v4l/by-id/usb-MAPIR_Survey3-video-index0
+  pixel_format: MJPEG      # the Survey3W's capture path delivers MJPEG -> stream-copy record
+  width: 1920
+  height: 1080
+  sof_timestamps: true     # v4l2 per-frame timestamps (closer to capture than host arrival)
+
+recording:
+  enabled: true            # survey capture IS the product — record by default
+  encoder: auto
+  output_dir: /data/recordings
+  segment_seconds: 60
+
+transport:
+  plugin_endpoint: { enabled: true, socket_path: /tmp/cam/frames }
+  raw_endpoint: { enabled: false, socket_path: /tmp/cam/raw }
+
+plugins:
+  - name: ros2-bridge
+    enabled: true
+    isolation: container
+    params: { topic: image_raw }
