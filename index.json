@@ -26,6 +26,11 @@
       "path": "services/ros2-bag-logger",
       "version": "1.0.0"
     },
+    "sbg": {
+      "kind": "service",
+      "path": "services/sbg",
+      "version": "0.1.0"
+    },
     "sbg-driver": {
       "kind": "service",
       "path": "services/sbg-driver",

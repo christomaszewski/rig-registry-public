@@ -1,0 +1,13 @@
+# AUTO-UPDATED on every sbg_driver release by that repo's registry-release workflow
+# (rewrites this file wholesale + regenerates index.json; name comes from rigging.yaml
+# `service:`). Hand-edits will be clobbered by the next release — change rigging.yaml
+# or the workflow in the sbg_driver repo instead.
+kind: service
+name: sbg
+version: 0.1.0
+platforms: [linux/arm64]
+ros_distro: lyrical
+instantiable: true            # template service — a profile (or hand-authored config) instantiates it
+source:
+  repo: https://github.com/christomaszewski/sbg_driver.git
+  rev: b9f6e822660bcc0e6366ed058379e4fe67ba057d
