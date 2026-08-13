@@ -11,6 +11,11 @@
       "path": "profiles/mapir-survey3w",
       "version": "1.0.0"
     },
+    "ouster": {
+      "kind": "service",
+      "path": "services/ouster",
+      "version": "0.1.0"
+    },
     "ros1-bag-logger": {
       "kind": "service",
       "path": "services/ros1-bag-logger",

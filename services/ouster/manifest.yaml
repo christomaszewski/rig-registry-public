@@ -1,0 +1,12 @@
+# AUTO-UPDATED on every ouster release by the ouster repo's registry-release workflow
+# (rewrites this file wholesale + regenerates index.json). Hand-edits will be clobbered
+# by the next release — change the workflow in the ouster repo instead.
+kind: service
+name: ouster
+version: 0.1.0
+platforms: [linux/amd64, linux/arm64]
+ros_distro: lyrical
+instantiable: true            # template service — one sensor config per lidar instantiates it
+source:
+  repo: https://github.com/christomaszewski/ouster.git
+  rev: 0f6b8ed5d58ff2f2489d7ae13f29edc45b1c3499
