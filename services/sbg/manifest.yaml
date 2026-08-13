@@ -10,4 +10,4 @@ ros_distro: lyrical
 instantiable: true            # template service — a profile (or hand-authored config) instantiates it
 source:
   repo: https://github.com/christomaszewski/sbg_driver.git
-  rev: b9f6e822660bcc0e6366ed058379e4fe67ba057d
+  rev: 3fb12aaa29216633ea6d3ceff849181d548ba629
