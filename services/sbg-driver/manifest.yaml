@@ -1,0 +1,9 @@
+kind: service
+name: sbg-driver
+version: 0.1.0
+platforms: [linux/arm64]
+ros_distro: lyrical
+instantiable: true            # template service — a profile (or hand-authored config) instantiates it
+source:
+  repo: https://github.com/christomaszewski/sbg_driver.git
+  rev: a007251c7a22ff7bd741d564406b81c2fe679b30
