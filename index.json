@@ -31,11 +31,6 @@
       "path": "services/sbg",
       "version": "0.1.0"
     },
-    "sbg-driver": {
-      "kind": "service",
-      "path": "services/sbg-driver",
-      "version": "0.1.0"
-    },
     "siyi-zr30": {
       "kind": "profile",
       "path": "profiles/siyi-zr30",
