@@ -9,4 +9,4 @@ ros_distro: lyrical
 instantiable: true            # template service — one sensor config per lidar instantiates it
 source:
   repo: https://github.com/christomaszewski/ouster.git
-  rev: 0f6b8ed5d58ff2f2489d7ae13f29edc45b1c3499
+  rev: dca64bf2ed042928ab0544e14a5cce93113dece1
