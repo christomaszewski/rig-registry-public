@@ -1,8 +1,12 @@
+# AUTO-UPDATED on every rig-infra release by that repo's registry-release workflow
+# (one repo-wide version; rewrites this file wholesale + regenerates index.json).
+# Hand-edits will be clobbered by the next release — change the workflow in the
+# rig-infra repo instead.
 kind: service
 name: zenoh-router
-version: 1.0.0
+version: 1.1.0
 ros_distro: lyrical
 source:
   repo: https://github.com/christomaszewski/rig-infra.git
-  rev: e4d1ecc12ab2a23bb36e245bef6081c948f22c3e
-  path: zenoh-router          # rig-infra is a collection repo — one service per subdir
+  rev: b2049d709bc023e7bcc7c9b28b400342d72453a4
+  path: zenoh-router              # rig-infra is a collection repo — one service per subdir
