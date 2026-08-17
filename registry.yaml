@@ -1,7 +1,7 @@
 # Registry metadata. `schema` gates client compatibility (older rigs refuse newer
 # schemas with an upgrade pointer); `namespace` is the prefix consumers see
 # (`public/<package>`).
-schema: 1
+schema: 2
 name: rig-registry-public
 namespace: public
 description: ""

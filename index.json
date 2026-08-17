@@ -6,9 +6,14 @@
       "path": "services/camera-service",
       "version": "1.0.0"
     },
-    "mapir-survey3w": {
+    "camera-service:mapir-survey3w": {
       "kind": "profile",
-      "path": "profiles/mapir-survey3w",
+      "path": "profiles/camera-service/mapir-survey3w",
+      "version": "1.0.0"
+    },
+    "camera-service:siyi-zr30": {
+      "kind": "profile",
+      "path": "profiles/camera-service/siyi-zr30",
       "version": "1.0.0"
     },
     "ouster": {
@@ -31,11 +36,6 @@
       "path": "services/sbg",
       "version": "0.1.0"
     },
-    "siyi-zr30": {
-      "kind": "profile",
-      "path": "profiles/siyi-zr30",
-      "version": "1.0.0"
-    },
     "zenoh-router": {
       "kind": "service",
       "path": "services/zenoh-router",
@@ -43,35 +43,35 @@
     }
   },
   "projects": {},
-  "schema": 1,
+  "schema": 2,
   "sensors": {
     "mapir-survey3w": [
       {
-        "profile": "mapir-survey3w",
+        "profile": "camera-service:mapir-survey3w",
         "tier": "exact"
       }
     ],
     "siyi-zr30": [
       {
-        "profile": "siyi-zr30",
+        "profile": "camera-service:siyi-zr30",
         "tier": "exact"
       }
     ],
     "survey3": [
       {
-        "profile": "mapir-survey3w",
+        "profile": "camera-service:mapir-survey3w",
         "tier": "exact"
       }
     ],
     "survey3w": [
       {
-        "profile": "mapir-survey3w",
+        "profile": "camera-service:mapir-survey3w",
         "tier": "exact"
       }
     ],
     "zr30": [
       {
-        "profile": "siyi-zr30",
+        "profile": "camera-service:siyi-zr30",
         "tier": "exact"
       }
     ]

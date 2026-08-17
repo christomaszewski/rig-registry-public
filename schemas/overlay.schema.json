@@ -42,6 +42,17 @@
     "project": {
       "type": "string"
     },
+    "authored_against": {
+      "type": "object",
+      "properties": {
+        "service": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        }
+      }
+    },
     "config": {
       "type": "object",
       "required": [

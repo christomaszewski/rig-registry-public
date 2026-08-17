@@ -21,3 +21,13 @@ Ground rules `tools/validate` (and CI) enforce:
 Flow: branch → add/edit the package → `./tools/validate` → `./tools/gen-index` → commit
 (package + index) → PR. The easiest correct path from a working deployment is
 `rig pkg promote … --to <this registry>`, which scaffolds all of the above.
+
+## Schema 2 migration (2026-08-17)
+
+Profile identity is now the `(service, short-name)` tuple, spelled `service:short` in every ref
+(`public/camera-service:siyi-zr30@1.0.0`). On disk a profile lives at
+`profiles/<service>/<short>/` — the directory is a projection of the manifest: `name:` holds only
+the short half, and `requires.service` must name the parent directory (unqualified; foreign-target
+profiles keep the fully-qualified pin in `requires.service`). Flat `profiles/<name>/` layouts and
+`schema: 1` are refused by rig ≥ 0.2.0 with a migration pointer. This was a clean break: history
+before the move is not served for the migrated profiles.

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "profile manifest",
+  "title": "profile manifest (schema 2: lives at profiles/<service>/<short>/; `name` is the SHORT half \u2014 the identity is the `service:short` tuple)",
   "type": "object",
   "required": [
     "kind",
@@ -57,6 +57,9 @@
           "type": "string"
         }
       }
+    },
+    "based_on": {
+      "type": "string"
     },
     "config": {
       "type": "object",
