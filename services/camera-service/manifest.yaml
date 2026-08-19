@@ -1,3 +1,7 @@
+# AUTO-UPDATED on every camera-service release by that repo's registry-release workflow
+# (rewrites this file wholesale + regenerates index.json; name comes from rigging.yaml
+# `service:`). Hand-edits will be clobbered by the next release — change rigging.yaml
+# or the workflow in the camera-service repo instead.
 kind: service
 name: camera-service
 version: 1.0.0
@@ -6,4 +10,4 @@ ros_distro: lyrical
 instantiable: true            # template service — a profile (or hand-authored config) instantiates it
 source:
   repo: https://github.com/christomaszewski/camera-service.git
-  rev: be911d43cc43b95a611f6992bbe56c81820a9b44
+  rev: 18048179c78e33beab6355626a871cab5a5c0fe5
