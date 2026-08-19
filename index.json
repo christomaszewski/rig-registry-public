@@ -6,11 +6,6 @@
       "path": "services/camera-service",
       "version": "1.0.0"
     },
-    "camera-service:mapir-survey3w": {
-      "kind": "profile",
-      "path": "profiles/camera-service/mapir-survey3w",
-      "version": "1.0.0"
-    },
     "camera-service:siyi-zr30": {
       "kind": "profile",
       "path": "profiles/camera-service/siyi-zr30",
@@ -50,27 +45,9 @@
   "projects": {},
   "schema": 2,
   "sensors": {
-    "mapir-survey3w": [
-      {
-        "profile": "camera-service:mapir-survey3w",
-        "tier": "exact"
-      }
-    ],
     "siyi-zr30": [
       {
         "profile": "camera-service:siyi-zr30",
-        "tier": "exact"
-      }
-    ],
-    "survey3": [
-      {
-        "profile": "camera-service:mapir-survey3w",
-        "tier": "exact"
-      }
-    ],
-    "survey3w": [
-      {
-        "profile": "camera-service:mapir-survey3w",
         "tier": "exact"
       }
     ],
