@@ -16,6 +16,11 @@
       "path": "profiles/camera-service/siyi-zr30",
       "version": "1.0.0"
     },
+    "mavlink-router": {
+      "kind": "service",
+      "path": "services/mavlink-router",
+      "version": "0.1.0"
+    },
     "ouster": {
       "kind": "service",
       "path": "services/ouster",

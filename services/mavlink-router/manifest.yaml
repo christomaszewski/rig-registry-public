@@ -1,0 +1,11 @@
+# AUTO-UPDATED on every mavlink-router-rig release by that repo's registry-release
+# workflow (rewrites this file wholesale + regenerates index.json). Hand-edits will be
+# clobbered by the next release — change the workflow in mavlink-router-rig instead.
+kind: service
+name: mavlink-router
+version: 0.1.0
+platforms: [linux/amd64, linux/arm64]
+instantiable: true            # config-instantiated — typically one router per vehicle
+source:
+  repo: https://github.com/christomaszewski/mavlink-router-rig.git
+  rev: 282a3bdaaef247f2222dbd6c0bc9b0e3e5523ef8
