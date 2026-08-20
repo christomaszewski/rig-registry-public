@@ -9,7 +9,7 @@
     "camera-service:siyi-zr30": {
       "kind": "profile",
       "path": "profiles/camera-service/siyi-zr30",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     "mavlink-router": {
       "kind": "service",

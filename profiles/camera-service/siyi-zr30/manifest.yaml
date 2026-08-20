@@ -1,6 +1,6 @@
 kind: profile
 name: siyi-zr30
-version: 1.0.0
+version: 1.0.1
 provides:
   sensor:
     - model: "SIYI ZR30"
