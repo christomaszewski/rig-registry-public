@@ -6,7 +6,7 @@ from it. Four package kinds:
 | kind | dir | carries |
 |---|---|---|
 | `service` | `services/<name>/` | pointer to a code repo pinned by FULL commit SHA and/or an image pinned by digest |
-| `profile` | `profiles/<name>/` | device/sensor profile: hardware `match` identifiers, a required service, a **nameless** config payload |
+| `profile` | `profiles/<service>/<short>/` | device/sensor profile: hardware `match` identifiers, a required service, a **nameless** config payload — identity is the `(service, short)` tuple, keyed `service:short` (registry schema 2) |
 | `overlay` | `overlays/<name>/` | versioned, project-tagged config **delta** targeting a service or instance |
 | `suite`   | `suites/<name>/`   | ordered *references* to the above (fully-qualified exact pins) — never payloads |
 
@@ -22,7 +22,18 @@ rig registry add public --path <this-dir>      # or use this folder in place (lo
 
 ## Author
 
-Add or edit a package (usually via `rig pkg promote` from a deployment, or by hand), then:
+From a deployment, rig scaffolds everything (rig ≥ v0.2.9):
+
+```
+rig pkg save <instance|service>       # UPDATE the package it came from, in place (next version)
+rig pkg promote <instance> --to public   # something NEW: first publish, fork, kind change, suite
+rig pkg outdated                      # dependency drift here (FIX column names repin/rebase)
+rig pkg repin <pkg> --to public       # advance declared pins; `pkg rebase` reconciles payloads
+rig registry pending / push --pr      # publish the promote/* branches (your git + gh; PR-gated)
+rig pkg yank <pkg> --from public      # retract a mistake (previous version restored from history)
+```
+
+Editing by hand instead? Validate + regenerate the index before committing:
 
 ```
 ./tools/validate      # every rule CI enforces, locally
@@ -30,7 +41,8 @@ Add or edit a package (usually via `rig pkg promote` from a deployment, or by ha
 ```
 
 Commit both the package and the regenerated `index.json`. CI (GitHub Actions and GitLab
-wrappers are both included) re-runs the same `tools/validate`.
+wrappers are both included) re-runs the same `tools/validate`. See CONTRIBUTING.md for the
+rules (schema 2: tuple profile identity, placement law, exact pins).
 
 `schemas/` holds informational JSON Schemas mirroring rig's validation rules for external
 tooling; the authoritative validator is rig itself (`rig registry validate`).
