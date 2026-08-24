@@ -4,7 +4,7 @@
     "camera-service": {
       "kind": "service",
       "path": "services/camera-service",
-      "version": "1.7.0"
+      "version": "1.7.1"
     },
     "camera-service:siyi-zr30": {
       "kind": "profile",
