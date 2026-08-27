@@ -4,10 +4,10 @@
 # or the workflow in the camera-service repo instead.
 kind: service
 name: camera-service
-version: 1.7.1
+version: 1.8.0
 platforms: [linux/arm64]
 ros_distro: lyrical
 instantiable: true            # template service — a profile (or hand-authored config) instantiates it
 source:
   repo: https://github.com/christomaszewski/camera-service.git
-  rev: 079ffaa47e749a946f604ed29c41b48ac1190201
+  rev: 4fdce53c9711091d0187f7d8d67ed7e5fd43d08b
