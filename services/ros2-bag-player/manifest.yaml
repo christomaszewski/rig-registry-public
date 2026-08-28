@@ -3,10 +3,10 @@
 # Hand-edits will be clobbered by the next release — change the workflow in the
 # rig-infra repo instead.
 kind: service
-name: zenoh-router
+name: ros2-bag-player
 version: 1.8.0
 ros_distro: lyrical
 source:
   repo: https://github.com/christomaszewski/rig-infra.git
   rev: d0553b300f3ac91ef14e9e0da40679037180afb3
-  path: zenoh-router              # rig-infra is a collection repo — one service per subdir
+  path: ros2-bag-player              # rig-infra is a collection repo — one service per subdir
