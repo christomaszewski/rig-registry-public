@@ -39,7 +39,7 @@
     "sbg": {
       "kind": "service",
       "path": "services/sbg",
-      "version": "0.6.0"
+      "version": "0.6.1"
     },
     "zenoh-router": {
       "kind": "service",
