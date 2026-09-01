@@ -24,17 +24,17 @@
     "ros1-bag-logger": {
       "kind": "service",
       "path": "services/ros1-bag-logger",
-      "version": "1.11.1"
+      "version": "1.11.2"
     },
     "ros2-bag-logger": {
       "kind": "service",
       "path": "services/ros2-bag-logger",
-      "version": "1.11.1"
+      "version": "1.11.2"
     },
     "ros2-bag-player": {
       "kind": "service",
       "path": "services/ros2-bag-player",
-      "version": "1.11.1"
+      "version": "1.11.2"
     },
     "sbg": {
       "kind": "service",
@@ -44,7 +44,7 @@
     "zenoh-router": {
       "kind": "service",
       "path": "services/zenoh-router",
-      "version": "1.11.1"
+      "version": "1.11.2"
     }
   },
   "projects": {},
