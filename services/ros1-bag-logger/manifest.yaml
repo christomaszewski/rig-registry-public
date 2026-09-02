@@ -4,9 +4,9 @@
 # rig-infra repo instead.
 kind: service
 name: ros1-bag-logger
-version: 1.12.0
+version: 1.12.1
 ros_distro: noetic
 source:
   repo: https://github.com/christomaszewski/rig-infra.git
-  rev: 45411690d5bbcc2c93118dd0a84edc739f50e75f
+  rev: 9d7df0b4d80b913a56ef85db8e5ae61676d92798
   path: ros1-bag-logger              # rig-infra is a collection repo — one service per subdir
