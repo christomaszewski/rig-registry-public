@@ -4,9 +4,9 @@
 # rig-infra repo instead.
 kind: service
 name: zenoh-router
-version: 1.13.0
+version: 1.13.1
 ros_distro: lyrical
 source:
   repo: https://github.com/christomaszewski/rig-infra.git
-  rev: 4627e7c18f60ec40a7205f76c0c24b1f95bbc815
+  rev: cc18df5875f3d6ce2d18ecdbf1e3e1a4c2042e1f
   path: zenoh-router              # rig-infra is a collection repo — one service per subdir
