@@ -4,10 +4,10 @@
 # or the workflow in the sbg_driver repo instead.
 kind: service
 name: sbg
-version: 0.6.1
+version: 0.7.0
 platforms: [linux/arm64]
 ros_distro: lyrical
 instantiable: true            # template service — a profile (or hand-authored config) instantiates it
 source:
   repo: https://github.com/christomaszewski/sbg_driver.git
-  rev: 0bf165cf2d98458a66efe66e476a08c5f463d63f
+  rev: 3d96229ea221a3022d37c33d6437416e618b35b3
