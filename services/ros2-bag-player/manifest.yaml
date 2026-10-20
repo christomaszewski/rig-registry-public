@@ -4,9 +4,9 @@
 # rig-infra repo instead.
 kind: service
 name: ros2-bag-player
-version: 1.16.0
+version: 1.17.0
 ros_distro: lyrical
 source:
   repo: https://github.com/christomaszewski/rig-infra.git
-  rev: c011ef33dbc668ac71ce0c33778a5d85e7c080d7
+  rev: fff572d324e2763dc0b4244318ea10b9b0bfab37
   path: ros2-bag-player              # rig-infra is a collection repo — one service per subdir
