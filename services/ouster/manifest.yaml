@@ -3,10 +3,10 @@
 # by the next release — change the workflow in the ouster repo instead.
 kind: service
 name: ouster
-version: 0.5.0
+version: 0.5.1
 platforms: [linux/amd64, linux/arm64]
 ros_distro: lyrical
 instantiable: true            # template service — one sensor config per lidar instantiates it
 source:
   repo: https://github.com/christomaszewski/ouster.git
-  rev: 035465d144fbd02751e371d14e13df99cc3431f1
+  rev: 31c0fd1e11d41c372137152601480453d867a4ee
