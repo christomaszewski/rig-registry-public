@@ -19,7 +19,7 @@
     "ouster": {
       "kind": "service",
       "path": "services/ouster",
-      "version": "0.5.1"
+      "version": "0.5.2"
     },
     "ros1-bag-logger": {
       "kind": "service",
