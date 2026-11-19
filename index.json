@@ -16,6 +16,11 @@
       "path": "services/mavlink-router",
       "version": "0.2.0"
     },
+    "observer": {
+      "kind": "service",
+      "path": "services/observer",
+      "version": "1.21.0"
+    },
     "ouster": {
       "kind": "service",
       "path": "services/ouster",
@@ -24,17 +29,17 @@
     "ros1-bag-logger": {
       "kind": "service",
       "path": "services/ros1-bag-logger",
-      "version": "1.20.1"
+      "version": "1.21.0"
     },
     "ros2-bag-logger": {
       "kind": "service",
       "path": "services/ros2-bag-logger",
-      "version": "1.20.1"
+      "version": "1.21.0"
     },
     "ros2-bag-player": {
       "kind": "service",
       "path": "services/ros2-bag-player",
-      "version": "1.20.1"
+      "version": "1.21.0"
     },
     "sbg": {
       "kind": "service",
@@ -44,7 +49,7 @@
     "zenoh-router": {
       "kind": "service",
       "path": "services/zenoh-router",
-      "version": "1.20.1"
+      "version": "1.21.0"
     }
   },
   "projects": {},
